@@ -1,0 +1,172 @@
+<div class="row"><app-cabecera style="width: 100%"></app-cabecera></div>
+<div class="row">
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light" style="width: 100%">
+    <div class="navbar-collapse" id="navbarSupportedContent">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </div>
+  </nav>
+
+</div>
+
+<div class="row">
+  <div class="col-sm-1">
+    <pre>
+    </pre>
+  </div>
+</div>
+<div class="row" style="background-color: gainsboro">
+  <div class="col-sm-1">
+    <pre>
+    </pre>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-2"></div>
+  <h2> USUARIOS</h2>
+  <div class="col-sm-1"></div>
+</div>
+
+<div class="row">
+  <div class="col-sm-1">
+    <pre>
+    </pre>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-2">
+  </div>
+  <div class="col-sm-2" *ngFor="let perfil of dividirPerfiles">
+    <div *ngIf="perfil.id != undefined">
+      <app-perfil
+        [id]="perfil.id"
+        [nombre]="perfil.nombrePerfil"
+        [urlImagen]="'/assets/imagenes/'+perfil.nombreImagen"
+      >
+      </app-perfil>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-1">
+    <pre>
+    </pre>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-1"></div>
+  <div class="col-sm-2" style="float: left">
+    <app-boton [nombreBoton]="'<- Anteriores 4'" (avisoDeClick)="dioClickAnterior($event)"></app-boton>
+  </div>
+  <div class="col-sm-7"></div>
+  <div class="col-sm-1">
+    <app-boton [nombreBoton]="'Siguientes 4 ->'" (avisoDeClick)="dioClickSiguiente($event)"></app-boton>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-1">
+    <pre>
+    </pre>
+  </div>
+</div>
+<div class="row" style="background-color: gainsboro">
+  <div class="col-sm-1">
+    <pre>
+    </pre>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-1"></div>
+  <h3> AUTORES</h3>
+  <div class="col-sm-1"></div>
+</div>
+
+<div class="row">
+  <div class="col-sm-1">
+    <pre>
+    </pre>
+  </div>
+</div>
+
+<div class="row" >
+  <div class="col-sm-2"></div>
+  <div class="col-sm-4"
+       *ngFor="let perfil of dividirPerfilesPapa; let i = index" >
+      <app-modelpapa
+        *ngIf="i < 2"
+        [nombre]="perfil.nombrePerfil"
+        [urlImagen]="'/assets/imagenes/'+perfil.nombreImagen"
+      >
+      </app-modelpapa>
+  </div>
+
+  <div class="col-sm-2"></div>
+</div>
+<div class="row">
+  <div class="col-sm-1"></div>
+  <div class="col-sm-2" style="float: left">
+    <app-boton [nombreBoton]="'<- Anteriores 2'" (avisoDeClick)="dioClickAnteriorPapa($event)"></app-boton>
+  </div>
+  <div class="col-sm-7"></div>
+  <div class="col-sm-1">
+    <app-boton [nombreBoton]="'Siguientes 2 ->'" (avisoDeClick)="dioClickSiguientePapa($event)"></app-boton>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-1">
+    <pre>
+    </pre>
+  </div>
+</div>
+<div class="row" style="background-color: gainsboro">
+  <div class="col-sm-1">
+    <pre>
+    </pre>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-1"></div>
+  <h3> LIBROS</h3>
+  <div class="col-sm-1"></div>
+</div>
+
+<div class="row">
+  <div class="col-sm-1">
+    <pre>
+    </pre>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col-sm-2"></div>
+  <div class="col-sm-2" *ngFor="let perfil of dividirPerfilesHijo">
+    <div *ngIf="perfil.id != undefined">
+      <app-modelhijo
+        [nombre]="perfil.nombrePerfil"
+      >
+      </app-modelhijo>
+    </div>
+  </div>
+  <div class="col-sm-2"></div>
+</div>
+<div class="row">
+  <div class="col-sm-2">
+    <pre>
+    </pre>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-1"></div>
+  <div class="col-sm-2" style="float: left">
+    <app-boton [nombreBoton]="'<- Anteriores 4'" (avisoDeClick)="dioClickAnteriorHijo($event)"></app-boton>
+  </div>
+  <div class="col-sm-7"></div>
+  <div class="col-sm-1">
+    <app-boton [nombreBoton]="'Siguientes 4 ->'" (avisoDeClick)="dioClickSiguienteHijo($event)"></app-boton>
+  </div>
+</div>

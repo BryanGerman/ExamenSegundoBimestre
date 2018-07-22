@@ -1,0 +1,19 @@
+
+#imagen{
+  float: left;
+  padding: 10px;
+  margin: 40px;
+  width: 27%;
+  height: 10%;
+}
+#informacion{
+  float: left;
+  padding: 10px;
+  margin: 40px;
+}
+
+#imagen:hover {
+  background-color: black;
+
+}
+

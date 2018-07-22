@@ -1,0 +1,10 @@
+.perfil{
+  animation-name: example;
+  animation-duration: 4s;
+}
+
+/* Standard syntax */
+@keyframes example {
+  from {transform: translateX(-200px)}
+  to {transform: translateX(200px);}
+}
